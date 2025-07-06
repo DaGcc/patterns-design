@@ -6,13 +6,11 @@ public class Program
     public static void Main(string[] args)
     {
 
-
         int valorEntrada;
         bool estaCorrecto, estadoOperacion;
 
         do
-        {
-
+        { 
             do
             {
                 Console.WriteLine("Ingrese [1: PRODUCTO_A], [2: PRODUCTO_B] O [3: PRODUCTO_C]");
@@ -31,7 +29,6 @@ public class Program
             IProducto producto = SimpleFactory.CrearInstancia(tipoProducto);
             producto.NombreProducto();
 
-
             Console.WriteLine("¿Desea seguir ingrasnado un tipo de producto? [Y: si] [N : no]");
             string respuestaUsuario = Console.ReadLine() ?? "N";
             estadoOperacion = (respuestaUsuario == "Y" || respuestaUsuario == "y") ? true : false;
@@ -39,5 +36,4 @@ public class Program
         } while (estadoOperacion);
 
     }
-
 }
